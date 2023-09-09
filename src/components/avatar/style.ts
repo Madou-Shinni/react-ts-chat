@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components"
+import {circle} from "../../utils/mixins";
 
 interface StyleProps {
     size?: string
@@ -10,10 +11,7 @@ const circleMixinFunc = (color: string,size: string | undefined) => css`
   content: "";
   display: block;
   position: absolute;
-  width: ${size || '8px'};
-  height: ${size || '8px'};
-  border-radius: 50%;
-  background-color: ${color};
+  ${circle(color,size)}
 `
 
 const AvatarWrapper = styled.div`

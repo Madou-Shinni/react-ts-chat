@@ -2,8 +2,6 @@ import React from "react";
 import Avatar from "./Avatar";
 import avatar from "../../assets/images/OIP.jpg"
 
-import '../../story.css'
-
 export default {
     title: "UI/Avatar",
     component: Avatar

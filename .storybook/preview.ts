@@ -4,6 +4,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { addons } from '@storybook/manager-api';
 
 import theme from '../src/theme';
+import 'story.css'
 
 const GlobalStyles = createGlobalStyle`
   body {
