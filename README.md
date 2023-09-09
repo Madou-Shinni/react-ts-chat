@@ -9,6 +9,8 @@ styled-components css-in-js样式库
 
 storybook 组件ui预览
 
+fontawesome 字体图标库
+
 ## hygen
 
 hygen component new [Component]
