@@ -1,8 +1,6 @@
 import React from "react";
 import IconWrapper from "./style";
-
-// svg类型组件
-type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>
+import {IconComponent} from "../../type/type";
 
 type Props = {
     icon?: IconComponent

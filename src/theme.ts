@@ -3,6 +3,7 @@ export default {
     green: "#34d859",
     gray: "rbac(24, 28, 47, 02)",
     red: '#f34848',
+    darkPurple: '#292f4c',
 
     normal: '1.4rem' /* 默认字体大小 */
 }
