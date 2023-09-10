@@ -40,8 +40,8 @@ const StatusIcon = styled.div<StyleProps>`
 `
 
 const AvatarClip = styled.div<StyleProps>`
-  width: ${({size}) => size || '48px'};
-  height: ${({size}) => size || '48px'};
+  width: ${({size}) => size ? size : '48px'};
+  height: ${({size}) => size ? size : '48px'};
   border-radius: 50%;
   overflow: hidden;
 `

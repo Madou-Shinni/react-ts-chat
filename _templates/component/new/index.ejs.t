@@ -8,7 +8,7 @@ type Props = {
 }
 
 const <%= name %>: React.FC<Props> = (props) => {
-    return <<%= name %>Wrapper>
+    return <<%= name %>Wrapper {...props}>
     </<%= name %>Wrapper>
 }
 
