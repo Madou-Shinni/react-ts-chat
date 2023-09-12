@@ -9,5 +9,11 @@ export default {
     grayDark: '#181c2f',
 
     normal: '1.4rem', /* 默认字体大小 */
-    medium: '1.6rem'
+    medium: '1.6rem',
+    large: '1.8rem',
+    xlarge: '2rem',
+    xxlarge: '2.4rem',
+    small: '1.2rem',
+    xsmall: '1rem',
+    xxsmall: '0.8rem',
 }
