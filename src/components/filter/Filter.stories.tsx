@@ -22,7 +22,7 @@ export const Default = () => {
             </Select>
         </FilterOption>
 
-        <FilterAction>
+        <FilterAction label={'创建会话'}>
             <Button>
                 <Icon icon={Plus} width={24} height={24}/>
             </Button>
