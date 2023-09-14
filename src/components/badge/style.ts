@@ -4,11 +4,10 @@ import { circle } from "utils/mixins";
 import theme from "../../theme";
 
 interface StyleProps {
-    children?: React.ReactNode
     show?: boolean
     count?: number
     showZero?: boolean
-    variant: string /* 变体 */
+    variant?: string /* 变体 */
 }
 
 const variants: any = {
@@ -43,7 +42,7 @@ const Count = styled.div`
 
 const BadgeWrapper = styled.div<StyleProps>`
   display: inline-block;
-  ${({variant}) => variants[variant]}
+  ${({variant}) => variant && variants[variant] || variants['default']}
 `
 
 export {Count}

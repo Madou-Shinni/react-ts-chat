@@ -1,9 +1,9 @@
 import styled, {css} from "styled-components"
 
 interface StyleProps {
-    type: 'primary' | 'secondary' | 'danger'
-    size: 'large' | 'xlarge' | 'xxlarge' | 'small' | 'xsmall' | 'xxsmall' | 'normal' | 'medium'
-    bold: boolean
+    type?: 'primary' | 'secondary' | 'danger'
+    size?: 'large' | 'xlarge' | 'xxlarge' | 'small' | 'xsmall' | 'xxsmall' | 'normal' | 'medium'
+    bold?: boolean
 }
 
 const typeVariants = {
@@ -47,8 +47,8 @@ const sizeVariants = {
 }
 
 const TextWrapper = styled.span<StyleProps>`
-    font-size: ${({size}) => sizeVariants[size] || sizeVariants.normal};
-    ${({type}) => typeVariants[type]};
+    font-size: ${({size}) => size && sizeVariants[size] || sizeVariants.normal};
+    ${({type}) => type && typeVariants[type]};
     ${({bold}) => bold && `font-weight: 500px`};
 `
 

@@ -8,6 +8,10 @@ export default {
     darkPurple: '#292f4c',
     grayDark: '#181c2f',
 
+    background: 'white',
+    inactiveColor: 'rgba(41,47,76,0.3)',
+    inactiveColorDark: 'white',
+
     normal: '1.4rem', /* 默认字体大小 */
     medium: '1.6rem',
     large: '1.8rem',
