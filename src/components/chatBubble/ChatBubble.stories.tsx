@@ -3,6 +3,7 @@ import ChatBubble from "./ChatBubble";
 
 import '../../story.css'
 import VoiceMessage from "../voiceMessage/VoiceMessage";
+import Emoji from "../emoji/Emoji";
 
 export default {
     title: "UI/ChatBubble",
@@ -15,7 +16,7 @@ export const FromOthers = () => {
 }
 
 export const Mine = () => {
-    return <ChatBubble type={"mine"} time={'昨天 下午14：26'}>没有人能比得上我记忆中的你，现在的你也不行</ChatBubble>
+    return <ChatBubble type={"mine"} time={'昨天 下午14：26'}>没有人能比得上我记忆中的你，现在的你也不行<Emoji label={'smile'}>😊</Emoji></ChatBubble>
 }
 
 export const VoiceMessageType = () => {
