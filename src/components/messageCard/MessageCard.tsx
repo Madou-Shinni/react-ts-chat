@@ -15,7 +15,7 @@ import {ReactComponent as Replied} from "assets/icons/replied.svg"
 
 type Props = {
     avatarSrc: string
-    avatarStatus?: string
+    avatarStatus?: 'online' | 'offline'
     statusText?: string
     name?: any
     time?: any

@@ -11,7 +11,7 @@ const IconWrapper = styled.div<StyleProps>`
   justify-content: center;
   
   svg,svg * {
-    ${({color}) => (color ? `fill: ${color}` : '')}
+    ${({color}) => (color ? `fill: ${color}` : '')};
     ${({opacity}) => (opacity ? `opacity: ${opacity}` : '')}
   }
 `
