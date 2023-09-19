@@ -8,7 +8,7 @@ type Props = {
     children?: any
 }
 
-const Text: React.FC<Props> = ({type,size,children},props) => {
+const Text: React.FC<Props> = ({type,size,children,...props}) => {
     return <TextWrapper type={type} size={size} {...props}>
         {children}
     </TextWrapper>

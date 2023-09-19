@@ -12,8 +12,8 @@ type Props = {
 }
 
 const Icon: React.FC<Props> = ({icon: IconComponent,width=24,height=24,color,opacity,...props}) => {
-    return <IconWrapper color={color} opacity={opacity} style={props.style} {...props}>
-        {IconComponent && <IconComponent css={props.style} width={width} height={height} />}
+    return <IconWrapper color={color} opacity={opacity} {...props}>
+        {IconComponent && <IconComponent width={width} height={height}/>}
     </IconWrapper>
 }
 
