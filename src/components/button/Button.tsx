@@ -9,8 +9,8 @@ type Props = {
     backGroundColor?: string
 }
 
-const Button: React.FC<Props> = ({children,type='primary',shape='circle'},props) => {
-    return <ButtonWrapper type={type} shape={shape} {...props}>
+const Button: React.FC<Props> = ({children,type='primary',shape='circle',size,...props}) => {
+    return <ButtonWrapper type={type} shape={shape} size={size} {...props}>
         {children}
     </ButtonWrapper>
 }
