@@ -15,5 +15,11 @@ const ProfileWrapper = styled.div<StyleProps>`
   overflow-y: auto;
 `
 
+const ContactSection = styled.section`
+  display: grid;
+  row-gap: 18px;
+`
+
 
 export default ProfileWrapper;
+export {ContactSection}

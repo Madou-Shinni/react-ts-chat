@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileWrapper from "./style";
+import ProfileWrapper, {ContactSection} from "./style";
 import Avatar from "../avatar/Avatar";
 import "styled-components/macro"
 import Paragraph from "../paragraph/Paragraph";
@@ -10,6 +10,7 @@ import SocialIcon from "../icon/socialIcon/SocialIcon";
 import face from "assets/images/OIP.jpg";
 import {faWeight} from "@fortawesome/free-solid-svg-icons"
 import Seperator from "../seperator/Seperator";
+import Text from "../text/Text";
 
 type Props = {
 }
@@ -54,8 +55,21 @@ const Profile: React.FC<Props> = (props) => {
             <SocialIcon icon={faWeight} bgColor={'#2483c0'}/>
         </SocialLinks>
         <Seperator />
+        <ContactSection>
+            <Description label={'联系电话'}>+86 1888888888</Description>
+            <Description label={'电子邮箱'}>ohcanikissu@gmail.com</Description>
+            <Description label={'个人网站'}>https://Ricardo.com</Description>
+        </ContactSection>
     </ProfileWrapper>
+}
+
+const Description: React.FC<{label?: string,children?: any}> = (props) => {
+    return <Paragraph>
+        <Text type={'secondary'}>{props.label}: </Text>
+        <Text>{props.children}</Text>
+    </Paragraph>
 }
 
 
 export default Profile;
+export {Description}
