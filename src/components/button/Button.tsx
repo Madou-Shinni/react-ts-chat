@@ -7,6 +7,7 @@ type Props = {
     shape?: 'circle' | 'rect'
     size?: string
     backGroundColor?: string
+    onClick?: any
 }
 
 const Button: React.FC<Props> = ({children,type='primary',shape='circle',size,...props}) => {

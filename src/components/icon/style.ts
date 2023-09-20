@@ -16,5 +16,12 @@ const IconWrapper = styled.div<StyleProps>`
   }
 `
 
+const SocialLinks = styled.div`
+  & > * {
+    margin: 0 9px;
+  }
+`
+
 
 export default IconWrapper;
+export {SocialLinks}
