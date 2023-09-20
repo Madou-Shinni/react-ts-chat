@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import arrowRight from "assets/icons/arrowRight.svg"
+import Icon from "../icon/Icon";
 
 interface StyleProps {
 }
@@ -61,6 +62,13 @@ const Photo = styled.img`
   object-fit: cover;
 `
 
+const CloseIcon = styled(Icon).attrs({opacity: 0.3})`
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+`
+
 
 export default ProfileWrapper;
-export {ContactSection,AlbumSection,AlbumTitle,Album,Photo}
+export {ContactSection,AlbumSection,AlbumTitle,Album,Photo,CloseIcon}

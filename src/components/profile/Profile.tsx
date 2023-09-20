@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileWrapper, {Album, AlbumSection, AlbumTitle, ContactSection, Photo} from "./style";
+import ProfileWrapper, {Album, AlbumSection, AlbumTitle, CloseIcon, ContactSection, Photo} from "./style";
 import Avatar from "../avatar/Avatar";
 import "styled-components/macro"
 import Paragraph from "../paragraph/Paragraph";
@@ -15,12 +15,14 @@ import Text from "../text/Text";
 import photo1 from "assets/images/photo1.jpg"
 import photo2 from "assets/images/photo2.jpg"
 import photo3 from "assets/images/photo3.jpg"
+import {ReactComponent as Cross} from "assets/icons/cross.svg"
 
 type Props = {
 }
 
 const Profile: React.FC<Props> = (props) => {
     return <ProfileWrapper {...props}>
+        <CloseIcon icon={Cross}/>
         <Avatar
             css={`margin: 26px 0`}
             src={face}
