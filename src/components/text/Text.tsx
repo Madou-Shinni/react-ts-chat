@@ -6,6 +6,7 @@ type Props = {
     size?: 'large' | 'xlarge' | 'xxlarge' | 'small' | 'xsmall' | 'xxsmall' | 'normal' | 'medium'
     bold?: boolean
     children?: any
+    style?: any
 }
 
 const Text: React.FC<Props> = ({type,size,children,...props}) => {

@@ -5,6 +5,7 @@ export default {
     gray2: "rgba(241, 237, 237, 0.3)",
     gray3: "rgba(24, 28, 47, 0.3)",
     gray4: "#efece8",
+    gray5: "#d8d8d8",
     red: '#f34848',
     darkPurple: '#292f4c',
     grayDark: '#181c2f',
