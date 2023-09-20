@@ -3,7 +3,7 @@ import PopoverWrapper, {Content, Target, Triangle} from "./style";
 
 type Props = {
     children?: any
-    content?: string
+    content?: any
     offset?: {x?: string,y?: string}
     visible?: boolean
     onVisible?: any
