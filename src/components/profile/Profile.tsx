@@ -9,6 +9,7 @@ import SocialIcon from "../icon/socialIcon/SocialIcon";
 
 import face from "assets/images/OIP.jpg";
 import {faWeight} from "@fortawesome/free-solid-svg-icons"
+import Seperator from "../seperator/Seperator";
 
 type Props = {
 }
@@ -52,6 +53,7 @@ const Profile: React.FC<Props> = (props) => {
             <SocialIcon icon={faWeight} bgColor={'black'}/>
             <SocialIcon icon={faWeight} bgColor={'#2483c0'}/>
         </SocialLinks>
+        <Seperator />
     </ProfileWrapper>
 }
 
