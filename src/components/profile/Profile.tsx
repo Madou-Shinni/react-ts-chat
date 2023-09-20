@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileWrapper, {ContactSection} from "./style";
+import ProfileWrapper, {Album, AlbumSection, AlbumTitle, ContactSection, Photo} from "./style";
 import Avatar from "../avatar/Avatar";
 import "styled-components/macro"
 import Paragraph from "../paragraph/Paragraph";
@@ -11,6 +11,10 @@ import face from "assets/images/OIP.jpg";
 import {faWeight} from "@fortawesome/free-solid-svg-icons"
 import Seperator from "../seperator/Seperator";
 import Text from "../text/Text";
+
+import photo1 from "assets/images/photo1.jpg"
+import photo2 from "assets/images/photo2.jpg"
+import photo3 from "assets/images/photo3.jpg"
 
 type Props = {
 }
@@ -54,12 +58,24 @@ const Profile: React.FC<Props> = (props) => {
             <SocialIcon icon={faWeight} bgColor={'black'}/>
             <SocialIcon icon={faWeight} bgColor={'#2483c0'}/>
         </SocialLinks>
-        <Seperator />
+        <Seperator css={'margin: 30px'} />
         <ContactSection>
             <Description label={'联系电话'}>+86 1888888888</Description>
             <Description label={'电子邮箱'}>ohcanikissu@gmail.com</Description>
             <Description label={'个人网站'}>https://Ricardo.com</Description>
         </ContactSection>
+        <Seperator css={'margin: 30px'} />
+        <AlbumSection>
+            <AlbumTitle>
+                <Text type={'secondary'}>相册（31）</Text>
+                <a>查看全部</a>
+            </AlbumTitle>
+            <Album>
+                <Photo src={photo1} alt={''} />
+                <Photo src={photo2} alt={''} />
+                <Photo src={photo3} alt={''} />
+            </Album>
+        </AlbumSection>
     </ProfileWrapper>
 }
 
