@@ -15,3 +15,10 @@ export const Default = () => {
         <Option>最新消息222</Option>
     </Select>
 }
+
+export const FormSelect = () => {
+    return <Select type={"form"} >
+        <Option>杭州市</Option>
+        <Option>浙江省</Option>
+    </Select>
+}
