@@ -16,20 +16,48 @@ import photo1 from "assets/images/photo1.jpg"
 import photo2 from "assets/images/photo2.jpg"
 import photo3 from "assets/images/photo3.jpg"
 import {ReactComponent as Cross} from "assets/icons/cross.svg"
+import Button from "../button/Button";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPen} from "@fortawesome/free-solid-svg-icons/faPen";
 
 type Props = {
+    showEditButton?: boolean
+    showCloseIcon?: boolean
+    onEdit?: any
+    status?: 'online' | 'offline'
+    children?: any
 }
 
-const Profile: React.FC<Props> = (props) => {
+const Profile: React.FC<Props> = ({showCloseIcon= true,...props}) => {
     return <ProfileWrapper {...props}>
-        <CloseIcon icon={Cross}/>
+        {showCloseIcon && <CloseIcon icon={Cross}/>}
         <Avatar
-            css={`margin: 26px 0`}
+            css={`
+              margin: 26px 0;
+              grid-area: 1 / 1 / 3 / 2;
+            `}
             src={face}
             size={'160px'}
-            status={'online'}
+            status={props.status}
             statusIconSize={'25px'}
         />
+        {props.showEditButton &&
+            <Button
+                size={'52px'}
+                onClick={props.onEdit}
+                css={`
+                  grid-area: 1 / 1 / 3 / 2;
+                  align-self: end;
+                  margin-left: 100px;
+                  z-index: 10;      
+                `}
+            >
+                <FontAwesomeIcon css={`
+                  font-size: 24px;
+                `}
+                 icon={faPen} />
+            </Button>
+        }
         <Paragraph
             size={"xlarge"}
             css={`

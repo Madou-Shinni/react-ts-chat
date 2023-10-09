@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Avatar: React.FC<Props> = (props) => {
-    return <AvatarWrapper>
+    return <AvatarWrapper {...props}>
         {props.status && <StatusIcon status={props.status} size={props.statusIconSize}/>}
         <AvatarClip size={props.size}>
             <AvatarImage src={props.src} alt=""/>
