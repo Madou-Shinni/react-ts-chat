@@ -1,6 +1,6 @@
 # react-ts-chat
 
-## 技术湛
+## 技术栈
 react18
 
 hygen 模板代码生成
