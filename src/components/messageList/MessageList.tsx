@@ -1,15 +1,8 @@
-import Filter, {FilterAction, FilterOption} from "components/filter/Filter";
 import React from "react";
 import MessageListWrapper, {ChatList} from "./style";
-import Select from "../select/Select";
-import Option from "../option/Option";
-import Button from "../button/Button";
-import Icon from "../icon/Icon";
-import Input, {Search} from "../input/Input";
 import MessageCard from "../messageCard/MessageCard";
-
-import {ReactComponent as Plus} from "assets/icons/plus.svg"
 import face1 from "assets/images/OIP.jpg"
+import FilterList from "../filterList/FilterList";
 
 
 type Props = {
@@ -17,8 +10,10 @@ type Props = {
 
 const MessageList: React.FC<Props> = (props) => {
     return <MessageListWrapper {...props}>
-        <Search />
-        <ChatFilter />
+        <FilterList
+            options={['最新消息优先','在线好友优先']}
+            actionLabel={'创建会话'}
+        >
         <ChatList>
             {[1,2,3,4,5,6].map((_,index)=>(
                 <MessageCard
@@ -34,24 +29,9 @@ const MessageList: React.FC<Props> = (props) => {
                     unreadCount={2}
                 />
             ))}
-        </ChatList>
+            </ChatList>
+        </FilterList>
     </MessageListWrapper>
-}
-
-const ChatFilter: React.FC<Props> = (props) => {
-    return <Filter style={{padding: '20px 0'}} {...props}>
-        <FilterOption label={'列表排序'}>
-            <Select>
-                <Option>最新消息优先</Option>
-                <Option>在线好友优先</Option>
-            </Select>
-        </FilterOption>
-        <FilterAction label={'创建会话'}>
-            <Button>
-                <Icon icon={Plus} width={12} height={12} />
-            </Button>
-        </FilterAction>
-    </Filter>
 }
 
 
